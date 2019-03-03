@@ -1,0 +1,438 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabHotAndCold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/tmpcart"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="ToSummaryPage"
+
+
+        />
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/c"
+    >
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#510a0909"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/ColdCoffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cold Coffee"
+                    android:textSize="25dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/ColdCoffeePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.30"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyColdCoffee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ColdCoffeePrice"
+                    android:layout_below="@id/ColdCoffeePrice"
+                    android:text="BUY"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"
+                    android:onClick="OrderColdCoffee"
+                    />
+
+                <TextView
+                    android:id="@+id/ColdCoffeeQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ColdCoffee"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ColdCoffeeQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/ColdCoffee"
+                    android:layout_toEndOf="@id/ColdCoffeeQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementColdCoffee"
+                    />
+
+                <TextView
+                    android:id="@+id/ColdCoffeeQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ColdCoffeeQtyPlus"
+                    android:layout_below="@id/ColdCoffee"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ColdCoffeeQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/ColdCoffee"
+                    android:layout_toEndOf="@id/ColdCoffeeQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementColdCoffee"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#510a0909"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/ChocolateShake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chocolate Shake"
+                    android:textSize="25dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/ChocolateShakePrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.40"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyChocolateShake"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ChocolateShakePrice"
+                    android:layout_below="@id/ChocolateShakePrice"
+                    android:text="BUY"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"
+                    android:onClick="OrderChocolateShake"/>
+
+                <TextView
+                    android:id="@+id/ChocolateShakeQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ChocolateShake"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChocolateShakeQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/ChocolateShake"
+                    android:layout_toEndOf="@id/ChocolateShakeQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementChocolateShake"/>
+
+                <TextView
+                    android:id="@+id/ChocolateShakeQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ChocolateShakeQtyPlus"
+                    android:layout_below="@id/ChocolateShake"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChocolateShakeQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/ChocolateShake"
+                    android:layout_toEndOf="@id/ChocolateShakeQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementChocolateShake"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#510a0909"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/HotBournvitaMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hot Bournvita Milk"
+                    android:textSize="23dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/HotBournvitaMilkPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.30"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyHotBournvitaMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/HotBournvitaMilkPrice"
+                    android:layout_below="@id/HotBournvitaMilkPrice"
+                    android:text="BUY"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"
+                    android:onClick="OrderBournvitaMilk"/>
+
+                <TextView
+                    android:id="@+id/HotBournvitaMilkQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/HotBournvitaMilk"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/HotBournvitaMilkQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/HotBournvitaMilk"
+                    android:layout_toEndOf="@id/HotBournvitaMilkQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementBournvitaMilk"/>
+
+                <TextView
+                    android:id="@+id/HotBournvitaMilkQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/HotBournvitaMilkQtyPlus"
+                    android:layout_below="@id/HotBournvitaMilk"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/HotBournvitaMilkQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/HotBournvitaMilk"
+                    android:layout_toEndOf="@id/HotBournvitaMilkQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementBournvitaMilk"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#510a0909"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/HotPlainMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hot Plain Milk"
+                    android:textSize="25dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/HotPlainMilkPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.20"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyHotPlainMilk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/HotPlainMilkPrice"
+                    android:layout_below="@id/HotPlainMilkPrice"
+                    android:text="BUY"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"
+                    android:onClick="OrderMilk"/>
+
+                <TextView
+                    android:id="@+id/HotPlainMilkQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/HotPlainMilk"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/HotPlainMilkQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/HotPlainMilk"
+                    android:layout_toEndOf="@id/HotPlainMilkQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementMilk"/>
+
+                <TextView
+                    android:id="@+id/HotPlainMilkQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/HotPlainMilkQtyPlus"
+                    android:layout_below="@id/HotPlainMilk"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/HotPlainMilkQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/HotPlainMilk"
+                    android:layout_toEndOf="@id/HotPlainMilkQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementMilk"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>
+</android.support.design.widget.CoordinatorLayout>

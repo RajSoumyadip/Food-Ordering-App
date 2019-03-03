@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabMenuSelection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/tmpcart"
+        android:backgroundTint="#FFFFFF"
+
+
+        />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/p"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/Hot"
+                android:text="Hot and Cold"
+                android:textColor="#FFFFFF"
+                android:layout_marginBottom="15dp"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_above="@+id/rolls"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                app:buttonColor="#000000"
+                android:shadowColor="#FFFFFF"
+                app:shadowEnabled="true"
+                app:shadowHeight="5dp"
+                app:cornerRadius="50dp"
+                android:onClick="ToHotCold"/>
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/rolls"
+                android:text="Rolls"
+                android:textColor="#FFFFFF"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+
+                app:buttonColor="#000000"
+                android:shadowColor="#FFFFFF"
+                app:shadowEnabled="true"
+                android:textSize="20dp"
+                app:shadowHeight="5dp"
+                app:cornerRadius="50dp"
+                android:onClick="ToRolls"/>
+
+
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/Snacks"
+                android:text="Snacks"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rolls"
+                app:buttonColor="#000000"
+                android:shadowColor="#FFFFFF"
+                app:shadowEnabled="true"
+                app:shadowHeight="5dp"
+                app:cornerRadius="20dp"
+                android:onClick="ToSnacks"/>
+
+
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

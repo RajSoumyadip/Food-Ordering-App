@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+        android:layout_height="match_parent"
+    android:orientation="vertical"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/os"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_marginTop="70dp"
+        android:id="@+id/ButLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2"
+       >
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/PlaceOrder"
+            android:text="PLACE ORDER"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:shadowColor="#000000"
+            app:buttonColor="#000000"
+            app:shadowEnabled="true"
+            app:shadowColor="#8b8787"
+            app:cornerRadius="25dp"
+            app:shadowHeight="5dp"
+            />
+
+        <info.hoang8f.widget.FButton
+            android:id="@+id/ClearOrder"
+            android:text="Clear Order"
+            android:layout_weight="1"
+            android:textColor="#020202"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="36dp"
+            android:layout_margin="8dp"
+            android:layout_width="0dp"
+            android:onClick="Clr"
+            android:layout_height="wrap_content"
+            android:shadowColor="#000000"
+            app:buttonColor="#ffffff"
+            app:shadowEnabled="true"
+            app:shadowColor="#000000"
+            app:cornerRadius="25dp"
+            app:shadowHeight="5dp"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/Tot"
+        android:layout_below="@+id/ButLay"
+        android:layout_width="wrap_content"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+
+
+        <ListView
+            android:layout_below="@+id/Tot"
+            android:layout_marginTop="20dp"
+            android:id="@+id/OrderList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </ListView>
+
+
+</RelativeLayout>
+
+

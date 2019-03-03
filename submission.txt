@@ -1,0 +1,3 @@
+Submission Content:
+1.A Presentation briefing about the the whole project.
+2.The whole package of the app TMP , the folder contains all the codes and the apk of the app.

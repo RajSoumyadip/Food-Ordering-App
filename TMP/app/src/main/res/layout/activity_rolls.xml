@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fabRolls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/tmpcart"
+        android:backgroundTint="#FFFFFF"
+        android:onClick="ToSummaryPage"
+
+        />
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/v">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/activity_horizontal_margin"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/AlooVegRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Aloo Veg. Roll"
+                    android:textSize="25dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/AlooVegRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.50"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyAlooVegRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/AlooVegRollPrice"
+                    android:layout_below="@id/AlooVegRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyAlooVegRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/AlooVegRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/AlooVegRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/AlooVegRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/AlooVegRoll"
+                    android:layout_toEndOf="@id/AlooVegRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementAlooVegRoll"/>
+
+                <TextView
+                    android:id="@+id/AlooVegRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/AlooVegRollQtyPlus"
+                    android:layout_below="@id/AlooVegRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/AlooVegRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/AlooVegRoll"
+                    android:layout_toEndOf="@id/AlooVegRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementAlooVegRoll"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+            android:layout_marginTop="10dp"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/PaneerPasandaRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paneer Pasanda Roll"
+                    android:textSize="22dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/PaneerPasandaRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.70"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyPaneerPasandaRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/PaneerPasandaRollPrice"
+                    android:layout_below="@id/PaneerPasandaRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyPaneerPasandaRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/PaneerPasandaRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/PaneerPasandaRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/PaneerPasandaRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/PaneerPasandaRoll"
+                    android:layout_toEndOf="@id/PaneerPasandaRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementPaneerPasandaRoll"/>
+
+                <TextView
+                    android:id="@+id/PaneerPasandaRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/PaneerPasandaRollQtyPlus"
+                    android:layout_below="@id/PaneerPasandaRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/PaneerPasandaRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/PaneerPasandaRoll"
+                    android:layout_toEndOf="@id/PaneerPasandaRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementPaneerPasandaroll"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+            android:layout_marginTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/EggRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Egg Roll"
+                    android:textSize="25dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/EggRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.60"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyEggRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/EggRollPrice"
+                    android:layout_below="@id/EggRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyEggRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/EggRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/EggRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/EggRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/EggRoll"
+                    android:layout_toEndOf="@id/EggRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementEggRoll"/>
+
+                <TextView
+                    android:id="@+id/EggRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/EggRollQtyPlus"
+                    android:layout_below="@id/EggRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/EggRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/EggRoll"
+                    android:layout_toEndOf="@id/EggRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementEggRoll"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+            android:layout_marginTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/ChickenCreamRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken Cream Roll"
+                    android:textSize="23dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/ChickenCreamRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.80"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyChickenCreamRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ChickenCreamRollPrice"
+                    android:layout_below="@id/ChickenCreamRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyChickenCreamRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/ChickenCreamRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ChickenCreamRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChickenCreamRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/ChickenCreamRoll"
+                    android:layout_toEndOf="@id/ChickenCreamRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementChickenCreamRoll"/>
+
+                <TextView
+                    android:id="@+id/ChickenCreamRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ChickenCreamRollQtyPlus"
+                    android:layout_below="@id/ChickenCreamRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChickenCreamRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/ChickenCreamRoll"
+                    android:layout_toEndOf="@id/ChickenCreamRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementChickenCreamRoll"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+            android:layout_marginTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/DoubleEggChickenRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Double Egg Chicken Roll"
+                    android:textSize="18dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/DoubleEggChickenRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.60"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyDoubleEggChickenRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/DoubleEggChickenRollPrice"
+                    android:layout_below="@id/DoubleEggChickenRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyDoubleEggChickenRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/DoubleEggChickenRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/DoubleEggChickenRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/DoubleEggChickenRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/DoubleEggChickenRoll"
+                    android:layout_toEndOf="@id/DoubleEggChickenRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementDoubleEggChickenRoll"/>
+
+                <TextView
+                    android:id="@+id/DoubleEggChickenRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/DoubleEggChickenRollQtyPlus"
+                    android:layout_below="@id/DoubleEggChickenRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/DoubleEggChickenRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/DoubleEggChickenRoll"
+                    android:layout_toEndOf="@id/DoubleEggChickenRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementDoubleEggChickenRoll"/>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+            android:layout_marginTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/ChickenSeekhKababRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken Seekh Kabab Roll"
+                    android:textSize="18dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/ChickenSeekhKababRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.60"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyChickenSeekhKababRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ChickenSeekhKababRollPrice"
+                    android:layout_below="@id/ChickenSeekhKababRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyChickenSeekhKababRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/ChickenSeekhKababRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ChickenSeekhKababRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChickenSeekhKababRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/ChickenSeekhKababRoll"
+                    android:layout_toEndOf="@id/ChickenSeekhKababRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementChickenSeekhKababRoll"/>
+
+                <TextView
+                    android:id="@+id/ChickenSeekhKababRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ChickenSeekhKababRollQtyPlus"
+                    android:layout_below="@id/ChickenSeekhKababRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChickenSeekhKababRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/ChickenSeekhKababRoll"
+                    android:layout_toEndOf="@id/ChickenSeekhKababRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementChickenSeekhKababRoll"/>
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#65030303"
+            android:layout_marginTop="10dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:padding="@dimen/activity_horizontal_margin"
+                >
+
+                <TextView
+                    android:id="@+id/ChickenTikkaRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chicken Tikka Roll"
+                    android:textSize="23dp"
+                    android:fontFamily="monospace"
+                    android:textColor="#ffffff"/>
+
+                <TextView
+                    android:id="@+id/ChickenTikkaRollPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rs.75"
+                    android:textSize="23dp"
+                    android:layout_alignParentRight="true"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/buyChickenTikkaRoll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@id/ChickenTikkaRollPrice"
+                    android:layout_below="@id/ChickenTikkaRollPrice"
+                    android:text="BUY"
+                    android:onClick="BuyChickenTikkaRoll"
+                    android:textColor="#ffffff"
+                    android:background="@drawable/button_border"/>
+
+                <TextView
+                    android:id="@+id/ChickenTikkaRollQty"
+                    android:paddingTop="12dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ChickenTikkaRoll"
+                    android:text="Quantity: "
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChickenTikkaRollQtyPlus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="+"
+                    android:layout_below="@id/ChickenTikkaRoll"
+                    android:layout_toEndOf="@id/ChickenTikkaRollQty"
+                    android:background="@drawable/button_border"
+                    android:textColor="#ffffff"
+                    android:onClick="IncrementChickenTikkaRoll"/>
+
+                <TextView
+                    android:id="@+id/ChickenTikkaRollQtyView"
+                    android:paddingTop="12dp"
+                    android:layout_width="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toEndOf="@id/ChickenTikkaRollQtyPlus"
+                    android:layout_below="@id/ChickenTikkaRoll"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="#ffffff"/>
+
+                <Button
+                    android:id="@+id/ChickenTikkaRollQtyMinus"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:text="-"
+                    android:textStyle="bold"
+                    android:background="@drawable/button_border"
+                    android:layout_below="@id/ChickenTikkaRoll"
+                    android:layout_toEndOf="@id/ChickenTikkaRollQtyView"
+                    android:textColor="#ffffff"
+                    android:onClick="DecrementChickenTikkaRoll"/>
+
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+
+
+    </LinearLayout>
+
+</ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

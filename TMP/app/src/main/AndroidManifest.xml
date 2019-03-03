@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.soumyadipghosh.tmp">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Tera Mera Point"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SignIn"
+            android:label="Sign In" />
+        <activity
+            android:name=".RollsActivity"
+            android:label="Rolls" />
+        <activity
+            android:name=".SnacksActivity"
+            android:label="Snacks" />
+        <activity
+            android:name=".HotAndCold"
+            android:label="Hot And Cold Drinks" />
+        <activity
+            android:name=".Summary"
+            android:label="" />
+        <activity android:name=".Signup" />
+        <activity android:name=".MenuSelectionActivity" />
+        <activity android:name=".Main2Activity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".OrderPlaced"></activity>
+    </application>
+
+</manifest>
